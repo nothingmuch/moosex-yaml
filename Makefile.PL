@@ -12,6 +12,10 @@ WriteMakefile(
 	PL_FILES     => { },
 	PREREQ_PM    => {
 		'Test::use::ok' => 0,
+		'YAML' => 0,
+		'MooseX::Blessed::Reconstruct' => 0,
+		'Sub::Exporer' => 0,
+		'namespace::clean' => 0,
 	},
 );
 
