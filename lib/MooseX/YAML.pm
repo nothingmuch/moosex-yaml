@@ -5,6 +5,8 @@ package MooseX::YAML;
 use strict;
 use warnings;
 
+our $VERSION = "0.01";
+
 use Carp qw(croak);
 
 use MooseX::Blessed::Reconstruct;
