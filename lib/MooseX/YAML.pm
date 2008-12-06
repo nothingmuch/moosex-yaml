@@ -54,6 +54,18 @@ sub _resolve {
 	}
 }
 
+my $load;
+sub Load {
+    $load ||= __PACKAGE__->_resolve("Load");
+    fixup( $load->(@_) );
+}
+
+my $loadfile;
+sub LoadFile {
+    $loadfile ||= __PACKAGE__->_resolve("LoadFile");
+    fixup( $loadfile->(@_) );
+}
+
 __PACKAGE__
 
 __END__
