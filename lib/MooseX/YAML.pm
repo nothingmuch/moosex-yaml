@@ -33,10 +33,10 @@ sub _resolve {
 	if ( keys %$flags ) {
 		croak "Can't use more than one of -xs, -syck or -pp" if keys %$flags > 1;
 
-		if ( $flags->{-xs} ) {
+		if ( exists $flags->{-xs} ) {
 			require YAML::XS;
 			return YAML::XS->can($routine);
-		} elsif ( $flags->{-syck} ) {
+		} elsif ( exists $flags->{-syck} ) {
 			require YAML::Syck;
 			return YAML::Syck->can($routine);
 		} else {
